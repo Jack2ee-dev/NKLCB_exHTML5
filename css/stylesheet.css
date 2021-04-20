@@ -27,7 +27,28 @@ body *::after{
 /* 헤더 */
 .header{
   background-color: #fff;
+  position: relative;
   /*height: 10vh;*/
+}
+/* 로고 */
+.logo {
+  position: absolute;
+  background-color: yellow;
+  margin-top: 0;
+  top: 45px;
+  left: 65px;
+}
+.logo a {
+  display: block;
+  background-color: pink;
+}
+.logo img {
+  /*display: block;*/
+  vertical-align: middle;
+}
+/* 안내링크 */
+.member {
+  margin: 0;
 }
 .visual{
   background-color: lime;
