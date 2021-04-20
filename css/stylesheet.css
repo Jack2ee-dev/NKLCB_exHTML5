@@ -1,5 +1,20 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url("./fontello.css");
 @import url(./normalize.css);
+
+/* 숨김 콘텐츠 */
+.a11y-hidden {
+  background-color: yellow;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  visibility: hidden;
+  clip: rect(0 0 0 0); /* for old version browser */
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+}
 /* 스타일 초기화 */
 /* 링크 스타일 */
 a {
@@ -35,15 +50,16 @@ body *::after{
   position: relative;
   /*height: 10vh;*/
   border-radius: 0 0 15px 15px;
-  padding: 0 30px 50px;
+  /*padding: 0 30px 50px;*/
 }
 /* 로고 */
 .logo {
   position: absolute;
   /*background-color: yellow;*/
   margin-top: 0;
-  top: 35px;
+  top: 45px;
   left: 65px;
+  z-index: 10;
 }
 .logo a {
   display: block;
@@ -79,6 +95,75 @@ body *::after{
 }
 .member li:last-child a {
   padding-right: 0;
+}
+.navigation {
+  padding-bottom: 40px;
+}
+.menu {
+  background: #e25a2d linear-gradient(to bottom, orangered 0%, orange 45%, orange 60%, orangered 100%);
+  padding-left: 225px;
+  margin: 0;
+  list-style: none;
+  box-shadow: 0 -2px 0 0 black;
+  border-radius: 0 0 5px 5px;
+  height: 45px;
+  /*border-top: 2px solid #000;*/
+}
+.menu :focus{
+  outline: 0;
+}
+.menu-item {
+  position: relative;
+  float: left;
+  border-left: 2px solid #fff;
+}
+.menu-button {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: block;
+  padding: 0 20px;
+  line-height: 45px;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+}
+.menu-act .menu-button {
+  color: #ff0;
+  /*border-bottom: 2px solid #000;*/
+}
+.menu-act .menu-button::after {
+  content: "";
+  display: block;
+  border-top: 2px solid black;
+}
+.sub-menu {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  top: 47px;
+  white-space: nowrap;
+  display: none;
+}
+.sub-menu1 {
+  display: block;
+}
+.sub-menu1,
+.sub-menu2,
+.sub-menu3 {
+  left: 0;
+}
+.sub-menu4,
+.sub-menu5,
+.sub-menu6 {
+  right: 0;
+  display: none;
+}
+.sub-menu li, .sub-menu a {
+  display: inline-block;
+}
+
+.sub-menu1 a {
+  padding: 10px 10px 10px 0;
 }
 .visual{
   background-color: lime;
