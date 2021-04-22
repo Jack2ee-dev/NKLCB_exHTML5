@@ -330,7 +330,7 @@ body *::after{
 .sign .icon-right-open {
   color: #e25a2d;
 }
-/* 유효성 배너 검사 */
+/* 유효성 검사 배너 */
 .validation-list {
   margin: 25px 0 0 0;
   padding-left: 0;
@@ -359,6 +359,78 @@ body *::after{
 /*  padding: 5px 0 5px 40px;*/
 /*  vertical-align: middle;*/
 /*}*/
+
+/* 웹 관련 용어 */
+/*.term {*/
+/*  background-color: #d8d8d8;*/
+/*  margin-top: 20px;*/
+/*  border: 1px solid silver;*/
+/*  border-radius: 10px;*/
+/*  padding: 0 20px 20px 20px;*/
+/*}*/
+/*.term-list {*/
+/*  display: flow-root;*/
+/*}*/
+/*.term-list div dd {*/
+/*  margin: 0;*/
+/*}*/
+/*.term-list-subject {*/
+/*  float: right;*/
+/*  width: 140px;*/
+/*}*/
+/*.term-list-thumbnail {*/
+/*  float: left;*/
+/*}*/
+/*.term-list-brief {*/
+/*  width: 140px;*/
+/*  float: right;*/
+/*}*/
+.term {
+  background: #ccc linear-gradient(180deg, #ccc, #eee);
+  margin-top: 20px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 15px 15px 0;
+}
+.term-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+}
+.term-list {
+  background-color: yellow;
+  margin: 10px 0 0 0;
+  display: flow-root;
+}
+.term-list-subject {
+  background-color: pink;
+  float: right;
+  width: 145px;
+  color: #296897;
+}
+.term-list-thumbnail {
+  background-color: lime;
+  margin-left: 0;
+  float: left;
+}
+.term-list-thumbnail img {
+  display: block;
+}
+.term-list-brief {
+  background-color: orange;
+  margin-left: 0;
+  float: right;
+  width: 145px;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+.term-list > :nth-child(6n+4),
+.term-list > :nth-child(6n+6) {
+  float: left;
+}
+.term-list > :nth-child(6n+5) {
+  float: right;
+}
 .slogan{
   background-color: purple;
   height: 10vh;
