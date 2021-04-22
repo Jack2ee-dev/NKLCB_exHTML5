@@ -3,7 +3,8 @@
 @import url(./normalize.css);
 
 /* 숨김 콘텐츠 */
-.a11y-hidden, legend {
+.a11y-hidden,
+legend {
   background-color: yellow;
   position: absolute;
   width: 1px;
@@ -21,11 +22,11 @@ a {
   text-decoration: none;
   color: inherit;
 }
-html{
+html {
   font-size: 10px;
 }
-body{
-  font-family: 'Spoqa Han Sans', 'sans-serif';
+body {
+  font-family: "Spoqa Han Sans", "sans-serif";
   font-weight: 400;
   background-color: #fff;
   color: #181818;
@@ -33,22 +34,27 @@ body{
 }
 body *,
 body *::before,
-body *::after{
+body *::after {
   box-sizing: border-box;
 }
 /* 레이아웃 */
-.container{
+.container {
   background-color: #ccc;
-  background-image: url(./images/bg_flower.png), linear-gradient(180deg, #ccc 0%, #eee 30%, #fff 60%, #fff 100%);
+  background-image: url(./images/bg_flower.png),
+    linear-gradient(180deg, #ccc 0%, #eee 30%, #fff 60%, #fff 100%);
   background-repeat: no-repeat;
   background-position: 50% 0;
 }
-.header, .visual, .main, .slogan, .footer-inner{
+.header,
+.visual,
+.main,
+.slogan,
+.footer-inner {
   width: 940px;
   margin: 0 auto;
 }
 /* 헤더 */
-.header{
+.header {
   background-color: #fff;
   position: relative;
   /*height: 10vh;*/
@@ -103,7 +109,14 @@ body *::after{
   padding-bottom: 40px;
 }
 .menu {
-  background: #e25a2d linear-gradient(to bottom, orangered 0%, orange 45%, orange 60%, orangered 100%);
+  background: #e25a2d
+    linear-gradient(
+      to bottom,
+      orangered 0%,
+      orange 45%,
+      orange 60%,
+      orangered 100%
+    );
   padding-left: 225px;
   margin: 0;
   list-style: none;
@@ -112,7 +125,7 @@ body *::after{
   height: 45px;
   /*border-top: 2px solid #000;*/
 }
-.menu :focus{
+.menu :focus {
   outline: 0;
 }
 .menu-item {
@@ -161,7 +174,8 @@ body *::after{
   right: 0;
   display: none;
 }
-.sub-menu li, .sub-menu a {
+.sub-menu li,
+.sub-menu a {
   display: inline-block;
 }
 
@@ -210,21 +224,21 @@ body *::after{
 }
 .visual::before {
   background-image: url(./images/ani_flower_01.png),
-                    url(./images/ani_flower_02.png);
+    url(./images/ani_flower_02.png);
   background-position: 0 -10px, 670px 0;
   /*background: url("./images/ani_flower_01.png") no-repeat 0 -10px, pink url("./images/ani_flower_02.png") no-repeat 670px 0;*/
 }
 .visual::after {
   /*background-color: pink;*/
   background-image: url("./images/ani_flower_03.png"),
-                    url("./images/ani_flower_04.png");
+    url("./images/ani_flower_04.png");
   background-position: 300px 10px, 800px 5px;
   animation-delay: 1s;
 }
 .visual-text {
   position: relative;
   z-index: 10;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   margin: 0;
   animation-name: textAni;
   animation-duration: 3s;
@@ -232,7 +246,7 @@ body *::after{
   display: inline-block;
   width: auto;
 }
-.main{
+.main {
   background-color: #fff;
   display: flow-root;
   padding: 30px 15px;
@@ -242,18 +256,18 @@ body *::after{
   display: flex;
   justify-content: space-between; */
 }
-.group{
+.group {
   height: 60vh;
   float: left;
   margin: 0 15px;
 }
-.group1{
+.group1 {
   width: 250px;
 }
-.group2{
+.group2 {
   width: 380px;
 }
-.group3{
+.group3 {
   width: 190px;
 }
 /* 로그인 폼 */
@@ -342,7 +356,8 @@ body *::after{
   border: 1px solid #aaa;
   border-radius: 25px;
   padding: 7px 10px 5px 40px;
-  background: url(./images/validation_icon.png) no-repeat 20px 50%, #ccc linear-gradient(180deg, #ccc, #eee);
+  background: url(./images/validation_icon.png) no-repeat 20px 50%,
+    #ccc linear-gradient(180deg, #ccc, #eee);
 }
 /*.validation-list li {*/
 /*  height: 3rem;*/
@@ -424,21 +439,61 @@ body *::after{
   margin-top: 5px;
   line-height: 1.5;
 }
-.term-list > :nth-child(6n+4),
-.term-list > :nth-child(6n+6) {
+.term-list > :nth-child(6n + 4),
+.term-list > :nth-child(6n + 6) {
   float: left;
 }
-.term-list > :nth-child(6n+5) {
+.term-list > :nth-child(6n + 5) {
   float: right;
 }
-.slogan{
+/* 검색 폼 */
+.search-form {
+  background: #ccc linear-gradient(180deg, #ccc, #fff);
+  border: 1px solid #aaa;
+  border-bottom-color: #fff;
+  border-radius: 15px 15px 0 0;
+  padding: 15px 25px 10px;
+}
+.search-form-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: yellow;
+}
+.search-form label {
+  cursor: pointer;
+}
+.search-form fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+[name="search"] {
+  width: 200px;
+  height: 24px;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  padding: 2px 2px 2px 5px;
+  margin-left: 5px;
+}
+.icon-search {
+  color: #181818;
+}
+.btn-search {
+  background: #222;
+  color: #fff;
+  border: 0;
+  padding: 0 10px;
+  border-radius: 3px;
+  font-size: 1.3rem;
+}
+.slogan {
   background-color: purple;
   height: 10vh;
 }
-.footer{
+.footer {
   background-color: tomato;
 }
-.footer-inner{
+.footer-inner {
   background-color: gray;
   height: 10vh;
 }
