@@ -457,7 +457,6 @@ body *::after {
 .search-form-container {
   display: flex;
   justify-content: space-between;
-  background-color: yellow;
 }
 .search-form label {
   cursor: pointer;
@@ -485,6 +484,80 @@ body *::after {
   padding: 0 10px;
   border-radius: 3px;
   font-size: 1.3rem;
+}
+/* 공지사항 및 자료실 */
+.board {
+  margin-top: 20px;
+  position: relative;
+  padding-top: 40px;
+  min-height: 170px;
+}
+.notice-list,
+.pds-list,
+.notice-more,
+.pds-more {
+  display: none;
+}
+.tab-act .notice-list,
+.tab-act .pds-list,
+.tab-act .notice-more,
+.tab-act .pds-more {
+  display: block;
+}
+.tab {
+  position: absolute;
+  top: 0;
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0;
+}
+.tab a {
+  display: block;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  color: #999;
+  background: #ccc linear-gradient(180deg, #ccc, #eee);
+  padding: 8px 15px 7px;
+}
+.tab-act .tab a {
+  color: #e25a2d;
+  background: #fff;
+  border-color: #e25a2d #e25a2d #fff #e25a2d;
+}
+.notice-heading {
+  left: 0;
+}
+.pds-heading {
+  left: 82px;
+}
+.notice-list,
+.pds-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.notice-list li,
+.pds-list li {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+.notice-list a,
+.pds-list a {
+  flex: 1 1 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.notice-more,
+.pds-more {
+  position: absolute;
+  top: 0;
+  right: -8px;
+  padding: 8px;
+}
+.icon-plus {
+  color: hsla(110, 50%, 30%, 1);
 }
 .slogan {
   background-color: purple;
